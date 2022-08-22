@@ -1,11 +1,7 @@
-# Basic NFT Marketplace end to end
+# 步骤 
+注册panata
+更改config.json ，设置读取key代码
 
-This code is for the Tutorial [Build your own NFT Marketplace from Scratch](https://docs.alchemy.com/alchemy/) built by [alchemy.com](https://alchemy.com)
+一个bug是 panata的访问频次，短时访问多次，会让其返回CORS错误，真是服了, 考虑是否将fetch api 降低速度
 
-To set up the repository and run the marketplace locally, run the below
-```bash
-git clone https://github.com/OMGWINNING/NFT-Marketplace-Tutorial
-cd NFT-Marketplace-Tutorial
-npm install
-npm start
-```
+

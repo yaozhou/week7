@@ -1,34 +1,38 @@
-require("@nomiclabs/hardhat-waffle");
-require("@nomiclabs/hardhat-ethers");
-const fs = require('fs');
-// const infuraId = fs.readFileSync(".infuraid").toString().trim() || "";
+require("@nomicfoundation/hardhat-toolbox");
 
-task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
+config = require('./config.json')
 
-  for (const account of accounts) {
-    console.log(account.address);
-  }
-});
+PRIVATE_KEY = config['PRIVATE_KEY_UP'] + config['PRIVATE_KEY_DOWN']
+PROVIDER_URL = config['PROVIDER_URL']
 
+
+/** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
-  defaultNetwork: "hardhat",
+  defaultNetwork: "goerli",
   networks: {
     hardhat: {
-      chainId: 1337
     },
     goerli: {
-      url: "<YOUR_ALCHEMY_URL>",
-      accounts: [ "<YOUR_PRIVATE_KEY>" ]
+      url: PROVIDER_URL,
+      accounts: [PRIVATE_KEY]
     }
   },
   solidity: {
-    version: "0.8.4",
+    version: "0.8.9",
     settings: {
       optimizer: {
         enabled: true,
         runs: 200
       }
     }
+  },
+  paths: {
+    sources: "./contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts"
+  },
+  mocha: {
+    timeout: 40000
   }
 };

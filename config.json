@@ -1,0 +1,9 @@
+{
+    "REACT_APP_PINATA_KEY": "6d6d96709a6ce64b4e42",
+    "REACT_APP_PINATA_SECRET": "10c4c2aec9cd20ccd80b69c25017fa5caacdd3253f4ba0a74e1ca548928f718d",
+    "PROVIDER_URL": "https://eth-goerli.g.alchemy.com/v2/jwpsP10R1uiivFuW8ZsYqtGHj8Q3kmDi",
+
+    "PRIVATE_KEY_UP": "40e50a85929e9bad66fa6dc84647f3a4",
+    "PRIVATE_KEY_DOWN": "b6c089d6b78ab346f05705b64c0957ab",
+    "WALLET_ADDR": "0xd2EaC7E61178B24f5A12a2DDaBa92CCcB235D9bd"
+}
